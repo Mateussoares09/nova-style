@@ -1,0 +1,155 @@
+{
+  "project_name": "NOVA STYLE",
+  "theme_decision": "light",
+  "typography": {
+    "headings": {
+      "fontFamily": "'Cormorant Garamond', serif",
+      "weights": ["300", "400", "600"],
+      "styling": "tracking-tighter leading-none"
+    },
+    "body": {
+      "fontFamily": "'Manrope', sans-serif",
+      "weights": ["400", "500"],
+      "styling": "tracking-normal leading-relaxed"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-[7vw] uppercase",
+      "h2": "text-4xl sm:text-5xl lg:text-6xl",
+      "h3": "text-2xl sm:text-3xl",
+      "body": "text-base lg:text-lg",
+      "overline": "text-xs tracking-[0.2em] uppercase"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#ffffff",
+      "secondary": "#f4f4f5",
+      "dark_section": "#0a0a0a"
+    },
+    "text": {
+      "primary": "#0a0a0a",
+      "secondary": "#71717a",
+      "inverse": "#ffffff"
+    },
+    "accent": {
+      "silver": "#9ca3af",
+      "gold_subtle": "#c0a062"
+    },
+    "ui": {
+      "border": "rgba(0,0,0,0.1)",
+      "border_dark": "rgba(255,255,255,0.15)"
+    }
+  },
+  "visual_enhancers": {
+    "surfaces": {
+      "header": "backdrop-blur-xl bg-white/80 border-b border-black/5 (CRITICAL: Never use fully transparent headers)",
+      "cards": "bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)]",
+      "buttons": "bg-black text-white hover:bg-zinc-800 transition-colors duration-300"
+    },
+    "borders": "sharp or very subtle rounded-sm (max 4px radius)",
+    "texture": "Use a subtle grain overlay in dark sections for editorial depth."
+  },
+  "components": {
+    "hero": {
+      "type": "kinetic",
+      "instructions": "Full viewport height (`min-h-screen`). Use Framer Motion for a line-by-line masked text reveal of the main headline. Image should have a subtle parallax effect on scroll. Overlay `bg-black/20` strictly to ensure text readability if placed over the image."
+    },
+    "marquee": {
+      "type": "editorial ribbon",
+      "instructions": "Slow, smooth drift. Background: `#f4f4f5`. Text: `#0a0a0a`. Large gaps (`gap-32`), uppercase serif font."
+    },
+    "product_cards": {
+      "instructions": "Large high-quality imagery. On hover, image scales up slightly (`scale-105`) while the container maintains `overflow-hidden`. Text left-aligned below the image. Include a quick 'Add to Cart' or 'Buy via WhatsApp' micro-interaction."
+    },
+    "manifesto": {
+      "instructions": "Numbered chapters (e.g., '01', '02') using large, light serif numerals. Staggered text blocks using Framer Motion scroll-triggers. Lots of negative space (`py-32`)."
+    },
+    "cart": {
+      "instructions": "Slide-out drawer (Shadcn Sheet/Drawer) with solid white background. Clean item list, bold total, stark black checkout button."
+    }
+  },
+  "layouts": {
+    "grid_strategy": "Bento 'Tetris' grid for Featured Categories. Avoid perfect symmetry. Use spans like `col-span-8` and `col-span-4`.",
+    "spacing": "Generous. Use `py-24`, `px-8` to `px-12`. Elements should have breathing room.",
+    "alignment": "Optical alignment over geometric. Left-align text blocks, center only key massive headings."
+  },
+  "motion": {
+    "scroll": "Lenis smooth scrolling is MANDATORY for premium feel.",
+    "animations": {
+      "reveal": "Masked upward text reveal on load (`y: '100%'` to `0` with `overflow-hidden` wrapper).",
+      "hover": "Image zoom inside containers. Button background shifts. Text color shifts.",
+      "page": "Subtle fade-ins for sections using Framer Motion `whileInView`."
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 ratio. Test text over images.",
+    "testing": "All interactive elements MUST have `data-testid` (e.g., `data-testid='add-to-cart-btn'`).",
+    "focus": "Use high contrast focus rings: `focus:ring-2 focus:ring-black focus:outline-none`."
+  },
+  "dependencies": [
+    "framer-motion",
+    "lucide-react",
+    "@studio-freight/lenis",
+    "react-fast-marquee",
+    "sonner"
+  ],
+  "media": {
+    "hero_and_featured": [
+      {
+        "url": "https://images.pexels.com/photos/28263000/pexels-photo-28263000.jpeg",
+        "description": "Chic fashion portrait in white fur coat. Best for Main Hero."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1606143412458-acc5f86de897",
+        "description": "Woman in black top. Great for featured collection."
+      },
+      {
+        "url": "https://images.pexels.com/photos/5745783/pexels-photo-5745783.jpeg",
+        "description": "Trendy female in black suit. Excellent for Lookbook / Categories."
+      }
+    ],
+    "products": [
+      {
+        "url": "https://images.pexels.com/photos/9218520/pexels-photo-9218520.jpeg",
+        "description": "Stylish white blazer on display."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1551232864-3f0890e580d9",
+        "description": "Jackets on clothes rack."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1467043237213-65f2da53396f",
+        "description": "White t-shirt and boots."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1549439602-43ebca2327af",
+        "description": "Shoes and earrings."
+      }
+    ],
+    "textures_and_abstract": [
+      {
+        "url": "https://images.pexels.com/photos/8465947/pexels-photo-8465947.jpeg",
+        "description": "White fabric smooth folds. Use as background for Manifesto or About."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1637004732258-4b792ce8f474",
+        "description": "Black fabric texture. Use for dark section backgrounds."
+      }
+    ]
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Make creative, distinctive frontends that surprise and delight.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (transition: all). Use specific transitions.",
+    "You MUST NOT center align the app container, avoid `.App { text-align: center; }`.",
+    "Always use modern button styles like sharp or pill-shaped, with interaction animations.",
+    "NEVER use AI assistant Emoji characters (\uD83E\uDD16\uD83E\uDDE0\uD83D\uDCAD\uD83D\uDCA1\uD83D\uDD2E\uD83C\uDFAF) for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Main agent relies on provided image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "CRITICAL: Use .js files, NOT .tsx files for components.",
+    "CRITICAL: Do not use fully transparent header backgrounds."
+  ]
+}
