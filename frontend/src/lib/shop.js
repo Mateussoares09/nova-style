@@ -1,4 +1,4 @@
-export const API_BASE = "http://127.0.0.1:8000/api";
+export const API_BASE = "https://nova-style-tan.vercel.app/api";
 
 export const WHATSAPP_NUMBER = "244923000000";
 
