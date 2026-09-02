@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
 
-const API = "http://127.0.0.1:8000/api";
+const API = "https://nova-style-tan.vercel.app/api";
 
 export default function FeaturedProducts() {
   const [products, setProducts] = useState([]);

@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Instagram, Facebook, Twitter, ArrowRight } from "lucide-react";
 import { waLink } from "@/lib/shop";
 
-const API = "http://127.0.0.1:8000/api";
+const API = "https://nova-style-tan.vercel.app/api";
 
 export default function Footer() {
   const [email, setEmail] = useState("");

@@ -6,8 +6,8 @@ import { Heart, ShoppingBag, ArrowLeft, Truck, RotateCcw, ShieldCheck } from "lu
 import { useStore } from "@/context/StoreContext";
 import { fmtPrice, waLink, EASE } from "@/lib/shop";
 
-const API = "http://127.0.0.1:8000/api";
 
+const API = "https://nova-style-tan.vercel.app/api";
 export default function ProductDetail() {
   const { id } = useParams();
   const { addToCart, toggleWishlist, isWishlisted } = useStore();

@@ -8,7 +8,7 @@ import { useStore } from "@/context/StoreContext";
 import { fmtPrice, waLink, EASE } from "@/lib/shop";
 import { Reveal } from "@/components/Reveal";
 
-const API = "http://127.0.0.1:8000/api";
+const API = "https://nova-style-tan.vercel.app/api";
 
 const inputCls = "w-full border border-black/15 px-4 py-3.5 text-sm focus:outline-none focus:border-black transition-colors duration-300 bg-white";
 
